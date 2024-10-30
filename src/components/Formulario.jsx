@@ -1,7 +1,5 @@
 import "./Formulario.css";
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
-import db from "../database/firebaseConfig";
 
 function Formulario({ campos, idf, TbDestino }) {
   const [dados, setDados] = useState({});

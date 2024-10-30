@@ -5,28 +5,10 @@ import Secao from "./Secao";
 import Cartao from "./Cartao";
 import Titulo from "./Titulo";
 import Formulario from "./Formulario";
-
-import { collection, getDocs } from "firebase/firestore";
-import db from "../database/firebaseConfig";
+import Contato from "./Contato";
 
 const Principal = () => {
   const [dados, setDados] = useState([]); // Estado para armazenar os dados
-
-  // Função para carregar dados da coleção
-  const lerBanco = async (Ncolec) => {
-    const comentarios = await getDocs(collection(db, Ncolec)); // Carrega os dados da Coleção
-    const registros = [];   // Cria um array vazio
-    comentarios.forEach((documento) => {   // Itera sobre os documentos
-      registros.push(documento.data()); // Adiciona os documentos ao array
-    });
-    setDados(registros); // Atualiza o estado com os dados
-    return registros; // Retorna o array com os dados
-  };
-
-  // UseEffect para carregar dados ao carregar a pagina
-  useEffect(() => {
-    lerBanco('servicos');
-  }, []); // O array vazio garante que o efeito só seja executado uma vez
 
   const campos = [
     //VETOR de OBJETOS
@@ -107,6 +89,7 @@ const Principal = () => {
         <Titulo texto="Contato" />
         <Formulario campos={campos} idf={"contato"} TbDestino={"comentarios"}  />
         <button onClick={() => lerBanco('comentarios')}>Ler Contatos</button>
+        <Contato></Contato>
       </Secao>
     </div>
       );
