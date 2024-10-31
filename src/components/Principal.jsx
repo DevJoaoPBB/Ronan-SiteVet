@@ -74,21 +74,10 @@ const Principal = () => {
       </Secao>
 
       <Secao>
-        <Titulo texto="Serviços Cadastrados" />
-        {dados.map((item, index) => (
-          <Cartao
-            key={index}
-            titulo={item.titulo}
-            descricao={item.desc}
-            imagem={item.img} 
-          />
-        ))}
       </Secao>
 
       <Secao>
         <Titulo texto="Contato" />
-        <Formulario campos={campos} idf={"contato"} TbDestino={"comentarios"}  />
-        <button onClick={() => lerBanco('comentarios')}>Ler Contatos</button>
         <Contato></Contato>
       </Secao>
     </div>

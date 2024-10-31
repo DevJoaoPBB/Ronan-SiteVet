@@ -21,20 +21,20 @@ const Contato = () => {
   return (
     <Container style={{ width: "50%", height: "100vh", alignItems: "center", display: "flex", justifyContent: "center" }}>
       <Form style={{ textAlign: "left", backgroundColor: "gray", padding: "5%", borderRadius: "15px" }} ref={formRef} onSubmit={handleSubmit}>
-        <h3>Contact Form</h3>
+        <h3>Formulario de Contato</h3>
         <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Name" name="Name" required />
+          <Form.Label>Nome</Form.Label>
+          <Form.Control type="text" placeholder="Digite seu nome" name="Name" required />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email Id</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" name="Email" required />
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Digite seu email" name="Email" required />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            Não compartilhe seu email para qualquer pessoa!
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="Description">
-          <Form.Label>Message</Form.Label>
+          <Form.Label>Mensagem</Form.Label>
           <Form.Control as="textarea" rows={3} name="Message" required />
         </Form.Group>
         <Button style={{ float: "right" }} variant="success" type="submit">

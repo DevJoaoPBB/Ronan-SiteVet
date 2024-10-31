@@ -5,7 +5,8 @@ const Cabecalho = () => {
   return (
     <header id="cabecalho">
       <img src="src/assets/logo.png" />
-      <h1>Bem-Vindo ao Pet House</h1>
+      <h1>Bem Vindo!</h1>
+      <h1>Você chegou no mundo de João!</h1>
     </header>
   );
 };
